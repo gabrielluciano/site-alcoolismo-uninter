@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
@@ -24,352 +24,322 @@
     <nav>
       <div class="container">
         <div class="nav-container">
-          <a href="#dados"
-            ><i class="fas fa-chart-bar"></i> Dados e Estatísticas</a
-          >
-          <a href="#juventude"
-            ><i class="fas fa-users"></i> Juventude em Foco</a
-          >
-          <a href="#impactos"
-            ><i class="fas fa-heart-broken"></i> Impactos Reais</a
-          >
-          <a href="#calculadora"
-            ><i class="fas fa-calculator"></i> Avalie seu Risco</a
-          >
+          <a href="#dados"><i class="fas fa-chart-bar"></i> Dados e Estatísticas</a>
+          <a href="#juventude"><i class="fas fa-users"></i> Juventude em Foco</a>
+          <a href="#impactos"><i class="fas fa-heart-broken"></i> Impactos Reais</a>
+          <a href="#calculadora"><i class="fas fa-calculator"></i> Avalie seu Risco</a>
           <a href="#prevencao"><i class="fas fa-shield-alt"></i> Prevenção</a>
           <a href="#ajuda"><i class="fas fa-hands-helping"></i> Busque Ajuda</a>
         </div>
       </div>
     </nav>
 
-    <!-- Seção de Dados -->
-    <section id="dados">
-      <div class="container">
-        <h2 class="section-title">Os Números Falam</h2>
+    <main>
+      <!-- Print Button -->
+      <button type="button" id="print" class="print-button" aria-label="Imprimir página">
+        <i class="fas fa-print"></i>
+      </button>
 
-        <div class="card-grid">
-          <div class="card fade-in">
-            <div class="card-icon"><i class="fas fa-skull-crossbones"></i></div>
-            <h3>Mortalidade</h3>
-            <p>
-              Aproximadamente <strong>58.000 mortes</strong> por ano no Brasil
-              são relacionadas ao consumo de álcool, incluindo acidentes de
-              trânsito, violência e doenças hepáticas.
-            </p>
-          </div>
+      <!-- Data Section -->
+      <section id="dados">
+        <div class="container">
+          <h2 class="section-title">Os Números Falam</h2>
 
-          <div class="card fade-in">
-            <div class="card-icon"><i class="fas fa-hospital"></i></div>
-            <h3>Internações</h3>
-            <p>
-              O álcool é responsável por <strong>23%</strong> de todas as
-              internações psiquiátricas no SUS, representando cerca de 160.000
-              internações anuais.
-            </p>
-          </div>
-
-          <div class="card fade-in">
-            <div class="card-icon"><i class="fas fa-car-crash"></i></div>
-            <h3>Acidentes de Trânsito</h3>
-            <p>
-              <strong>35%</strong> dos acidentes de trânsito fatais no Brasil
-              envolvem o consumo de álcool, especialmente entre jovens de 18 a
-              35 anos.
-            </p>
-          </div>
-        </div>
-
-        <div class="chart-container">
-          <h3>Consumo de Álcool por Faixa Etária no Brasil</h3>
-          <div class="chart-wrapper">
-            <canvas id="consumoIdade"></canvas>
-          </div>
-        </div>
-
-        <div class="chart-container">
-          <h3>Evolução das Mortes Relacionadas ao Álcool (2015-2023)</h3>
-          <div class="chart-wrapper">
-            <canvas id="evolucaoMortes"></canvas>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Seção Juventude -->
-    <section id="juventude" class="youth-section">
-      <div class="container">
-        <div class="youth-content">
-          <div>
-            <h2 style="font-size: 2.5rem; margin-bottom: 2rem">
-              Juventude em Risco
-            </h2>
-            <p style="font-size: 1.2rem; margin-bottom: 2rem">
-              A juventude brasileira está cada vez mais exposta aos riscos do
-              consumo precoce de álcool. Os dados mostram uma tendência
-              preocupante que demanda ação imediata.
-            </p>
-            <div class="youth-stats">
-              <div class="stat-box">
-                <div class="stat-number">67%</div>
-                <div>dos jovens já experimentaram álcool antes dos 18 anos</div>
+          <div class="card-grid">
+            <div class="card fade-in">
+              <div class="card-icon">
+                <i class="fas fa-skull-crossbones"></i>
               </div>
-              <div class="stat-box">
-                <div class="stat-number">24%</div>
-                <div>fazem uso abusivo regularmente</div>
+              <h3>Mortalidade</h3>
+              <p>
+                Aproximadamente <strong>58.000 mortes</strong> por ano no Brasil são relacionadas ao consumo de álcool,
+                incluindo acidentes de trânsito, violência e doenças hepáticas.
+              </p>
+            </div>
+
+            <div class="card fade-in">
+              <div class="card-icon"><i class="fas fa-hospital"></i></div>
+              <h3>Internações</h3>
+              <p>
+                O álcool é responsável por <strong>23%</strong> de todas as internações psiquiátricas no SUS,
+                representando cerca de 160.000 internações anuais.
+              </p>
+            </div>
+
+            <div class="card fade-in">
+              <div class="card-icon"><i class="fas fa-car-crash"></i></div>
+              <h3>Acidentes de Trânsito</h3>
+              <p>
+                <strong>35%</strong> dos acidentes de trânsito fatais no Brasil envolvem o consumo de álcool,
+                especialmente entre jovens de 18 a 35 anos.
+              </p>
+            </div>
+          </div>
+
+          <div class="chart-container">
+            <h3>Consumo de Álcool por Faixa Etária no Brasil</h3>
+            <div class="chart-wrapper">
+              <canvas id="consumptionByAgeCanvas"></canvas>
+            </div>
+          </div>
+
+          <div class="chart-container">
+            <h3>Evolução das Mortes Relacionadas ao Álcool (2015-2023)</h3>
+            <div class="chart-wrapper">
+              <canvas id="deathEvolutionCanvas"></canvas>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Youth Section -->
+      <section id="juventude" class="youth-section">
+        <div class="container">
+          <div class="youth-content">
+            <div>
+              <h2 style="font-size: 2.5rem; margin-bottom: 2rem">Juventude em Risco</h2>
+              <p style="font-size: 1.2rem; margin-bottom: 2rem">
+                A juventude brasileira está cada vez mais exposta aos riscos do consumo precoce de álcool. Os dados
+                mostram uma tendência preocupante que demanda ação imediata.
+              </p>
+              <div class="youth-stats">
+                <div class="stat-box">
+                  <div class="stat-number">67%</div>
+                  <div>dos jovens já experimentaram álcool antes dos 18 anos</div>
+                </div>
+                <div class="stat-box">
+                  <div class="stat-number">24%</div>
+                  <div>fazem uso abusivo regularmente</div>
+                </div>
+                <div class="stat-box">
+                  <div class="stat-number">42%</div>
+                  <div>começaram a beber entre 13-16 anos</div>
+                </div>
+                <div class="stat-box">
+                  <div class="stat-number">18%</div>
+                  <div>já sofreram blackouts alcoólicos</div>
+                </div>
               </div>
-              <div class="stat-box">
-                <div class="stat-number">42%</div>
-                <div>começaram a beber entre 13-16 anos</div>
+            </div>
+            <div>
+              <canvas id="consumptionAmongYoungCanvas" style="max-height: 350px"></canvas>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Impacts Section -->
+      <section id="impactos">
+        <div class="container">
+          <h2 class="section-title">Impactos Reais na Sociedade</h2>
+
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-icon" style="color: #e74c3c">
+                <i class="fas fa-brain"></i>
               </div>
-              <div class="stat-box">
-                <div class="stat-number">18%</div>
-                <div>já sofreram blackouts alcoólicos</div>
+              <h3>Saúde Mental</h3>
+              <p>
+                O álcool está presente em <strong>60%</strong> dos casos de depressão e ansiedade entre jovens,
+                prejudicando desenvolvimento cognitivo e emocional.
+              </p>
+            </div>
+
+            <div class="card">
+              <div class="card-icon" style="color: #f39c12">
+                <i class="fas fa-graduation-cap"></i>
               </div>
+              <h3>Educação</h3>
+              <p>
+                Estudantes que fazem uso abusivo de álcool têm
+                <strong>40%</strong> mais chances de abandonar os estudos e pior desempenho acadêmico.
+              </p>
+            </div>
+
+            <div class="card">
+              <div class="card-icon" style="color: #9b59b6">
+                <i class="fas fa-home"></i>
+              </div>
+              <h3>Família</h3>
+              <p>
+                O alcoolismo está presente em <strong>45%</strong> dos casos de violência doméstica e desestruturação
+                familiar no Brasil.
+              </p>
+            </div>
+
+            <div class="card">
+              <div class="card-icon" style="color: #27ae60">
+                <i class="fas fa-dollar-sign"></i>
+              </div>
+              <h3>Economia</h3>
+              <p>
+                O custo social do alcoolismo representa
+                <strong>R$ 7,3 bilhões</strong> anuais ao sistema público de saúde brasileiro.
+              </p>
             </div>
           </div>
-          <div>
-            <canvas id="juventudeChart" style="max-height: 350px"></canvas>
+
+          <div class="chart-container">
+            <h3>Principais Consequências do Alcoolismo</h3>
+            <div class="chart-wrapper">
+              <canvas id="consequencesCanvas"></canvas>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Seção Impactos -->
-    <section id="impactos">
-      <div class="container">
-        <h2 class="section-title">Impactos Reais na Sociedade</h2>
+      <!-- Risk Calculator -->
+      <section id="calculadora" class="calculator">
+        <div class="container">
+          <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2.5rem">Avalie seu Risco</h2>
+          <p style="text-align: center; margin-bottom: 3rem; font-size: 1.2rem">
+            Responda algumas perguntas para entender melhor sua relação com o álcool
+          </p>
 
-        <div class="card-grid">
-          <div class="card">
-            <div class="card-icon" style="color: #e74c3c">
-              <i class="fas fa-brain"></i>
+          <div style="max-width: 600px; margin: 0 auto">
+            <div class="form-group">
+              <label>Com que frequência você consome bebidas alcoólicas?</label>
+              <select id="frequencia">
+                <option value="0">Nunca</option>
+                <option value="1">Mensalmente ou menos</option>
+                <option value="2">2-4 vezes por mês</option>
+                <option value="3">2-3 vezes por semana</option>
+                <option value="4">4 ou mais vezes por semana</option>
+              </select>
             </div>
-            <h3>Saúde Mental</h3>
-            <p>
-              O álcool está presente em <strong>60%</strong> dos casos de
-              depressão e ansiedade entre jovens, prejudicando desenvolvimento
-              cognitivo e emocional.
-            </p>
-          </div>
 
-          <div class="card">
-            <div class="card-icon" style="color: #f39c12">
-              <i class="fas fa-graduation-cap"></i>
+            <div class="form-group">
+              <label>Quantas doses você consome em um dia típico?</label>
+              <select id="quantidade">
+                <option value="0">1-2 doses</option>
+                <option value="1">3-4 doses</option>
+                <option value="2">5-6 doses</option>
+                <option value="3">7-9 doses</option>
+                <option value="4">10 ou mais doses</option>
+              </select>
             </div>
-            <h3>Educação</h3>
-            <p>
-              Estudantes que fazem uso abusivo de álcool têm
-              <strong>40%</strong> mais chances de abandonar os estudos e pior
-              desempenho acadêmico.
-            </p>
-          </div>
 
-          <div class="card">
-            <div class="card-icon" style="color: #9b59b6">
-              <i class="fas fa-home"></i>
+            <div class="form-group">
+              <label>Com que frequência você consome 6 ou mais doses em uma ocasião?</label>
+              <select id="binge">
+                <option value="0">Nunca</option>
+                <option value="1">Menos que mensalmente</option>
+                <option value="2">Mensalmente</option>
+                <option value="3">Semanalmente</option>
+                <option value="4">Diariamente ou quase</option>
+              </select>
             </div>
-            <h3>Família</h3>
-            <p>
-              O alcoolismo está presente em <strong>45%</strong> dos casos de
-              violência doméstica e desestruturação familiar no Brasil.
-            </p>
-          </div>
 
-          <div class="card">
-            <div class="card-icon" style="color: #27ae60">
-              <i class="fas fa-dollar-sign"></i>
+            <div style="text-align: center">
+              <button class="btn" onclick="calcularRisco()">Avaliar Meu Risco</button>
             </div>
-            <h3>Economia</h3>
-            <p>
-              O custo social do alcoolismo representa
-              <strong>R$ 7,3 bilhões</strong> anuais ao sistema público de saúde
-              brasileiro.
-            </p>
+
+            <div id="resultado" class="result-box">
+              <h3 id="nivelRisco"></h3>
+              <p id="mensagemRisco"></p>
+              <p id="recomendacao"></p>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div class="chart-container">
-          <h3>Principais Consequências do Alcoolismo</h3>
-          <div class="chart-wrapper">
-            <canvas id="consequenciasChart"></canvas>
+      <!-- Prevention Section -->
+      <section id="prevencao">
+        <div class="container">
+          <h2 class="section-title">Prevenção que Funciona</h2>
+
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-icon" style="color: #3498db">
+                <i class="fas fa-users"></i>
+              </div>
+              <h3>Educação Familiar</h3>
+              <p>
+                Diálogo aberto entre pais e filhos sobre os riscos do álcool reduz em <strong>50%</strong> as chances de
+                uso precoce.
+              </p>
+            </div>
+
+            <div class="card">
+              <div class="card-icon" style="color: #e67e22">
+                <i class="fas fa-school"></i>
+              </div>
+              <h3>Programas Escolares</h3>
+              <p>
+                Escolas com programas de prevenção têm
+                <strong>35%</strong> menos casos de consumo problemático entre estudantes.
+              </p>
+            </div>
+
+            <div class="card">
+              <div class="card-icon" style="color: #1abc9c">
+                <i class="fas fa-running"></i>
+              </div>
+              <h3>Atividades Esportivas</h3>
+              <p>
+                Jovens envolvidos em esportes têm <strong>60%</strong> menos probabilidade de desenvolver dependência
+                alcoólica.
+              </p>
+            </div>
+
+            <div class="card">
+              <div class="card-icon" style="color: #e74c3c">
+                <i class="fas fa-user-md"></i>
+              </div>
+              <h3>Acompanhamento Médico</h3>
+              <p>Consultas regulares permitem identificação precoce de padrões de risco e intervenção eficaz.</p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Calculadora de Risco -->
-    <section id="calculadora" class="calculator">
-      <div class="container">
-        <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2.5rem">
-          Avalie seu Risco
-        </h2>
-        <p style="text-align: center; margin-bottom: 3rem; font-size: 1.2rem">
-          Responda algumas perguntas para entender melhor sua relação com o
-          álcool
-        </p>
+      <!-- Help Section -->
+      <section id="ajuda">
+        <div class="container">
+          <h2 class="section-title">Busque Ajuda</h2>
+          <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem">
+            Se você ou alguém que conhece precisa de ajuda, estes recursos estão disponíveis 24/7
+          </p>
 
-        <div style="max-width: 600px; margin: 0 auto">
-          <div class="form-group">
-            <label>Com que frequência você consome bebidas alcoólicas?</label>
-            <select id="frequencia">
-              <option value="0">Nunca</option>
-              <option value="1">Mensalmente ou menos</option>
-              <option value="2">2-4 vezes por mês</option>
-              <option value="3">2-3 vezes por semana</option>
-              <option value="4">4 ou mais vezes por semana</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label>Quantas doses você consome em um dia típico?</label>
-            <select id="quantidade">
-              <option value="0">1-2 doses</option>
-              <option value="1">3-4 doses</option>
-              <option value="2">5-6 doses</option>
-              <option value="3">7-9 doses</option>
-              <option value="4">10 ou mais doses</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label
-              >Com que frequência você consome 6 ou mais doses em uma
-              ocasião?</label
-            >
-            <select id="binge">
-              <option value="0">Nunca</option>
-              <option value="1">Menos que mensalmente</option>
-              <option value="2">Mensalmente</option>
-              <option value="3">Semanalmente</option>
-              <option value="4">Diariamente ou quase</option>
-            </select>
-          </div>
-
-          <div style="text-align: center">
-            <button class="btn" onclick="calcularRisco()">
-              Avaliar Meu Risco
-            </button>
-          </div>
-
-          <div id="resultado" class="result-box">
-            <h3 id="nivelRisco"></h3>
-            <p id="mensagemRisco"></p>
-            <p id="recomendacao"></p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Seção Prevenção -->
-    <section id="prevencao">
-      <div class="container">
-        <h2 class="section-title">Prevenção que Funciona</h2>
-
-        <div class="card-grid">
-          <div class="card">
-            <div class="card-icon" style="color: #3498db">
-              <i class="fas fa-users"></i>
+          <div class="help-grid">
+            <div class="help-card">
+              <i class="fas fa-phone"></i>
+              <h3>CVV - Centro de Valorização da Vida</h3>
+              <p><strong>188</strong></p>
+              <p>Apoio emocional e prevenção do suicídio</p>
             </div>
-            <h3>Educação Familiar</h3>
-            <p>
-              Diálogo aberto entre pais e filhos sobre os riscos do álcool reduz
-              em <strong>50%</strong> as chances de uso precoce.
-            </p>
-          </div>
 
-          <div class="card">
-            <div class="card-icon" style="color: #e67e22">
-              <i class="fas fa-school"></i>
+            <div class="help-card">
+              <i class="fas fa-hospital"></i>
+              <h3>CAPS-AD</h3>
+              <p>Centro de Atenção Psicossocial</p>
+              <p>Tratamento especializado em dependência química</p>
             </div>
-            <h3>Programas Escolares</h3>
-            <p>
-              Escolas com programas de prevenção têm <strong>35%</strong> menos
-              casos de consumo problemático entre estudantes.
-            </p>
-          </div>
 
-          <div class="card">
-            <div class="card-icon" style="color: #1abc9c">
-              <i class="fas fa-running"></i>
+            <div class="help-card">
+              <i class="fas fa-hands-helping"></i>
+              <h3>Alcoólicos Anônimos</h3>
+              <p>Grupos de apoio gratuitos</p>
+              <p>Reuniões presenciais e online</p>
             </div>
-            <h3>Atividades Esportivas</h3>
-            <p>
-              Jovens envolvidos em esportes têm <strong>60%</strong> menos
-              probabilidade de desenvolver dependência alcoólica.
-            </p>
-          </div>
 
-          <div class="card">
-            <div class="card-icon" style="color: #e74c3c">
+            <div class="help-card">
               <i class="fas fa-user-md"></i>
+              <h3>CRAS/CREAS</h3>
+              <p>Assistência Social</p>
+              <p>Suporte familiar e comunitário</p>
             </div>
-            <h3>Acompanhamento Médico</h3>
-            <p>
-              Consultas regulares permitem identificação precoce de padrões de
-              risco e intervenção eficaz.
-            </p>
+          </div>
+
+          <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: #ecf0f1; border-radius: 15px">
+            <h3 style="color: #2c3e50; margin-bottom: 1rem">Guarulhos - Vila Carmela</h3>
+            <p>UBS Vila Carmela: (11) 2468-1234</p>
+            <p>CAPS-AD Guarulhos: (11) 2087-5678</p>
+            <p>Conselho Tutelar: (11) 2464-9999</p>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- Seção de Ajuda -->
-    <section id="ajuda">
-      <div class="container">
-        <h2 class="section-title">Busque Ajuda</h2>
-        <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem">
-          Se você ou alguém que conhece precisa de ajuda, estes recursos estão
-          disponíveis 24/7
-        </p>
-
-        <div class="help-grid">
-          <div class="help-card">
-            <i class="fas fa-phone"></i>
-            <h3>CVV - Centro de Valorização da Vida</h3>
-            <p><strong>188</strong></p>
-            <p>Apoio emocional e prevenção do suicídio</p>
-          </div>
-
-          <div class="help-card">
-            <i class="fas fa-hospital"></i>
-            <h3>CAPS-AD</h3>
-            <p>Centro de Atenção Psicossocial</p>
-            <p>Tratamento especializado em dependência química</p>
-          </div>
-
-          <div class="help-card">
-            <i class="fas fa-hands-helping"></i>
-            <h3>Alcoólicos Anônimos</h3>
-            <p>Grupos de apoio gratuitos</p>
-            <p>Reuniões presenciais e online</p>
-          </div>
-
-          <div class="help-card">
-            <i class="fas fa-user-md"></i>
-            <h3>CRAS/CREAS</h3>
-            <p>Assistência Social</p>
-            <p>Suporte familiar e comunitário</p>
-          </div>
-        </div>
-
-        <div
-          style="
-            text-align: center;
-            margin-top: 3rem;
-            padding: 2rem;
-            background: #ecf0f1;
-            border-radius: 15px;
-          "
-        >
-          <h3 style="color: #2c3e50; margin-bottom: 1rem">
-            Guarulhos - Vila Carmela
-          </h3>
-          <p>UBS Vila Carmela: (11) 2468-1234</p>
-          <p>CAPS-AD Guarulhos: (11) 2087-5678</p>
-          <p>Conselho Tutelar: (11) 2464-9999</p>
-        </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <!-- Footer -->
     <footer>
@@ -378,9 +348,8 @@
           <div class="footer-section">
             <h4>Sobre o Projeto</h4>
             <p>
-              Projeto extensionista desenvolvido por estudantes da UNINTER com
-              foco na conscientização sobre os impactos do alcoolismo na
-              juventude brasileira.
+              Projeto extensionista desenvolvido por estudantes da UNINTER com foco na conscientização sobre os impactos
+              do alcoolismo na juventude brasileira.
             </p>
           </div>
 
@@ -405,27 +374,13 @@
               <i class="fas fa-envelope"></i>
               conscientizacao.alcoolismo@uninter.com
             </p>
-            <p>
-              <i class="fas fa-map-marker-alt"></i> Guarulhos - Vila Carmela, SP
-            </p>
+            <p><i class="fas fa-map-marker-alt"></i> Guarulhos - Vila Carmela, SP</p>
           </div>
         </div>
 
-        <div
-          style="
-            border-top: 1px solid #34495e;
-            padding-top: 2rem;
-            text-align: center;
-          "
-        >
-          <p>
-            &copy; 2025 Projeto Conscientização e Prevenção - UNINTER. Todos os
-            direitos reservados.
-          </p>
-          <p>
-            Este site foi desenvolvido com o objetivo educativo e de
-            conscientização social.
-          </p>
+        <div style="border-top: 1px solid #34495e; padding-top: 2rem; text-align: center">
+          <p>&copy; 2025 Projeto Conscientização e Prevenção - UNINTER. Todos os direitos reservados.</p>
+          <p>Este site foi desenvolvido com o objetivo educativo e de conscientização social.</p>
         </div>
       </div>
     </footer>

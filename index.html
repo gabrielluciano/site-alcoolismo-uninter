@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Conscientização e Prevenção: Impactos do Alcoolismo no Brasil</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- Header -->
@@ -14,14 +20,19 @@
           <p>Impactos do Alcoolismo no Brasil e a Juventude</p>
           <div class="impact-stat pulse">
             <div class="impact-number" id="counter">0</div>
-            <div>mortes por ano relacionadas ao álcool no Brasil</div>
+            <div class="impact-desc">Mortes <span>por ano</span> relacionadas ao álcool no Brasil</div>
           </div>
         </div>
       </div>
     </header>
 
+    <!-- Menu Button -->
+    <button type="button" id="menu-button" class="menu-button" aria-label="Abrir menu">
+      <i class="fas fa-bars"></i>
+    </button>
+
     <!-- Navigation -->
-    <nav>
+    <nav id="main-nav">
       <div class="container">
         <div class="nav-container">
           <a href="#dados"><i class="fas fa-chart-bar"></i> Dados e Estatísticas</a>
@@ -75,6 +86,12 @@
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section id="data">
+        <div class="container">
+          <h2 class="section-title">Veja os Números</h2>
 
           <div class="chart-container">
             <h3>Consumo de Álcool por Faixa Etária no Brasil</h3>
@@ -97,8 +114,8 @@
         <div class="container">
           <div class="youth-content">
             <div>
-              <h2 style="font-size: 2.5rem; margin-bottom: 2rem">Juventude em Risco</h2>
-              <p style="font-size: 1.2rem; margin-bottom: 2rem">
+              <h2 class="youth-content-title">Juventude em Risco</h2>
+              <p class="youth-content-text">
                 A juventude brasileira está cada vez mais exposta aos riscos do consumo precoce de álcool. Os dados
                 mostram uma tendência preocupante que demanda ação imediata.
               </p>
@@ -122,6 +139,7 @@
               </div>
             </div>
             <div>
+              <h3 class="youth-content-title">Consumo de Álcool entre os Jovens</h3>
               <canvas id="consumptionAmongYoungCanvas" style="max-height: 350px"></canvas>
             </div>
           </div>
@@ -135,7 +153,7 @@
 
           <div class="card-grid">
             <div class="card">
-              <div class="card-icon" style="color: #e74c3c">
+              <div class="card-icon light-red">
                 <i class="fas fa-brain"></i>
               </div>
               <h3>Saúde Mental</h3>
@@ -146,7 +164,7 @@
             </div>
 
             <div class="card">
-              <div class="card-icon" style="color: #f39c12">
+              <div class="card-icon orange">
                 <i class="fas fa-graduation-cap"></i>
               </div>
               <h3>Educação</h3>
@@ -157,7 +175,7 @@
             </div>
 
             <div class="card">
-              <div class="card-icon" style="color: #9b59b6">
+              <div class="card-icon purple">
                 <i class="fas fa-home"></i>
               </div>
               <h3>Família</h3>
@@ -168,7 +186,7 @@
             </div>
 
             <div class="card">
-              <div class="card-icon" style="color: #27ae60">
+              <div class="card-icon green">
                 <i class="fas fa-dollar-sign"></i>
               </div>
               <h3>Economia</h3>
@@ -250,7 +268,7 @@
 
           <div class="card-grid">
             <div class="card">
-              <div class="card-icon" style="color: #3498db">
+              <div class="card-icon light-blue">
                 <i class="fas fa-users"></i>
               </div>
               <h3>Educação Familiar</h3>
@@ -261,7 +279,7 @@
             </div>
 
             <div class="card">
-              <div class="card-icon" style="color: #e67e22">
+              <div class="card-icon orange">
                 <i class="fas fa-school"></i>
               </div>
               <h3>Programas Escolares</h3>
@@ -272,7 +290,7 @@
             </div>
 
             <div class="card">
-              <div class="card-icon" style="color: #1abc9c">
+              <div class="card-icon green">
                 <i class="fas fa-running"></i>
               </div>
               <h3>Atividades Esportivas</h3>
@@ -283,7 +301,7 @@
             </div>
 
             <div class="card">
-              <div class="card-icon" style="color: #e74c3c">
+              <div class="card-icon light-red">
                 <i class="fas fa-user-md"></i>
               </div>
               <h3>Acompanhamento Médico</h3>
@@ -294,11 +312,11 @@
       </section>
 
       <!-- Help Section -->
-      <section id="ajuda">
+      <section id="ajuda" class="help-section">
         <div class="container">
           <h2 class="section-title">Busque Ajuda</h2>
-          <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem">
-            Se você ou alguém que conhece precisa de ajuda, estes recursos estão disponíveis 24/7
+          <p class="help-section-text">
+            Se você ou alguém que conhece precisa de ajuda, estes recursos estão disponíveis 24 horas 7 dias por semana.
           </p>
 
           <div class="help-grid">
@@ -331,19 +349,37 @@
             </div>
           </div>
 
-          <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: #ecf0f1; border-radius: 15px">
-            <h3 style="color: #2c3e50; margin-bottom: 1rem">Guarulhos - Vila Carmela</h3>
-            <p>UBS Vila Carmela: (11) 2468-1234</p>
-            <p>CAPS-AD Guarulhos: (11) 2087-5678</p>
-            <p>Conselho Tutelar: (11) 2464-9999</p>
+          <div class="local-help">
+            <h3>Obtenha Ajuda em Guarulhos - Vila Carmela</h3>
+            <div>
+              <p><strong>UBS Vila Carmela</strong>: (11) 2468-1234</p>
+              <p><strong>CAPS-AD Guarulhos</strong>: (11) 2087-5678</p>
+              <p><strong>Conselho Tutelar</strong>: (11) 2464-9999</p>
+            </div>
           </div>
         </div>
       </section>
     </main>
 
     <!-- Footer -->
-    <footer>
+    <footer class="footer">
       <div class="container">
+        <div class="sources">
+          <h3>Fontes dos Dados</h3>
+          <p>
+            <a href="#">IBGE - Pesquisa Nacional de Saúde</a>
+          </p>
+          <p>
+            <a href="#">Ministério da Saúde - DATASUS</a>
+          </p>
+          <p>
+            <a href="#">SENAD - Secretaria Nacional Antidrogas</a>
+          </p>
+          <p>
+            <a href="#">OMS - Organização Mundial da Saúde</a>
+          </p>
+        </div>
+
         <div class="footer-content">
           <div class="footer-section">
             <h4>Sobre o Projeto</h4>
@@ -358,14 +394,6 @@
             <p>Carlos Eduardo Sousa Nunes Manfredi</p>
             <p>Gabriel Luciano de Souza</p>
             <p>Matheus Bessado Dos Santos</p>
-          </div>
-
-          <div class="footer-section">
-            <h4>Fontes dos Dados</h4>
-            <a href="#">IBGE - Pesquisa Nacional de Saúde</a>
-            <a href="#">Ministério da Saúde - DATASUS</a>
-            <a href="#">SENAD - Secretaria Nacional Antidrogas</a>
-            <a href="#">OMS - Organização Mundial da Saúde</a>
           </div>
 
           <div class="footer-section">

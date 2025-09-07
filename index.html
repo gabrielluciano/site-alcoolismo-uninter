@@ -209,53 +209,145 @@
       <!-- Risk Calculator -->
       <section id="calculadora" class="calculator">
         <div class="container">
-          <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2.5rem">Avalie seu Risco</h2>
-          <p style="text-align: center; margin-bottom: 3rem; font-size: 1.2rem">
-            Responda algumas perguntas para entender melhor sua relação com o álcool
-          </p>
+          <h2>Avalie seu Risco</h2>
+          <p class="calculator-text">Responda algumas perguntas para entender melhor sua relação com o álcool</p>
 
-          <div style="max-width: 600px; margin: 0 auto">
-            <div class="form-group">
-              <label>Com que frequência você consome bebidas alcoólicas?</label>
-              <select id="frequencia">
-                <option value="0">Nunca</option>
-                <option value="1">Mensalmente ou menos</option>
-                <option value="2">2-4 vezes por mês</option>
-                <option value="3">2-3 vezes por semana</option>
-                <option value="4">4 ou mais vezes por semana</option>
-              </select>
+          <div class="form">
+            <div class="form-groups">
+              <div class="form-group">
+                <label for="select-frequency">1. Com que frequência você toma alguma bebida que contém álcool?</label>
+                <select id="select-frequency">
+                  <option value="0">Nunca</option>
+                  <option value="1">Mensalmente ou menos</option>
+                  <option value="2">2-4 vezes por mês</option>
+                  <option value="3">2-3 vezes por semana</option>
+                  <option value="4">4 ou mais vezes por semana</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="select-quantity">2. Quantas doses você consome em um dia típico?</label>
+                <select id="select-quantity">
+                  <option value="0">1-2 doses</option>
+                  <option value="1">3-4 doses</option>
+                  <option value="2">5-6 doses</option>
+                  <option value="3">7-9 doses</option>
+                  <option value="4">10 ou mais doses</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="select-binge">3. Com que frequência você consome 6 ou mais doses em uma ocasião?</label>
+                <select id="select-binge">
+                  <option value="0">Nunca</option>
+                  <option value="1">Menos que mensalmente</option>
+                  <option value="2">Mensalmente</option>
+                  <option value="3">Semanalmente</option>
+                  <option value="4">Diariamente ou quase diariamente</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="select-cant-stop"
+                  >4. Com que frequência, no último ano, você percebeu que não conseguia parar de beber depois de
+                  começar?
+                </label>
+                <select id="select-cant-stop">
+                  <option value="0">Nunca</option>
+                  <option value="1">Menos que mensalmente</option>
+                  <option value="2">Mensalmente</option>
+                  <option value="3">Semanalmente</option>
+                  <option value="4">Diariamente ou quase diariamente</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="select-failed-responsibilities">
+                  5. Com que frequência, no último ano, você deixou de fazer o que normalmente era esperado de você por
+                  causa da bebida?
+                </label>
+                <select id="select-failed-responsibilities">
+                  <option value="0">Nunca</option>
+                  <option value="1">Menos que mensalmente</option>
+                  <option value="2">Mensalmente</option>
+                  <option value="3">Semanalmente</option>
+                  <option value="4">Diariamente ou quase diariamente</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="select-morning-drink">
+                  6. Com que frequência, durante o último ano, você precisou de uma bebida alcoólica pela manhã para
+                  conseguir se levantar após uma sessão de consumo excessivo de álcool?
+                </label>
+                <select id="select-morning-drink">
+                  <option value="0">Nunca</option>
+                  <option value="1">Menos que mensalmente</option>
+                  <option value="2">Mensalmente</option>
+                  <option value="3">Semanalmente</option>
+                  <option value="4">Diariamente ou quase diariamente</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="select-guilty"
+                  >7. Com que frequência, durante o último ano, você sentiu culpa ou remorso após beber?
+                </label>
+                <select id="select-guilty">
+                  <option value="0">Nunca</option>
+                  <option value="1">Menos que mensalmente</option>
+                  <option value="2">Mensalmente</option>
+                  <option value="3">Semanalmente</option>
+                  <option value="4">Diariamente ou quase diariamente</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="select-amnesia">
+                  8. Quantas vezes no último ano você não conseguiu se lembrar do que aconteceu na noite anterior porque
+                  estava bebendo?
+                </label>
+                <select id="select-amnesia">
+                  <option value="0">Nunca</option>
+                  <option value="1">Menos que mensalmente</option>
+                  <option value="2">Mensalmente</option>
+                  <option value="3">Semanalmente</option>
+                  <option value="4">Diariamente ou quase diariamente</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="select-injury"
+                  >9. Você ou outra pessoa já se feriu como resultado do seu consumo de álcool?
+                </label>
+                <select id="select-injury">
+                  <option value="0">Não</option>
+                  <option value="2">Sim, mas não no último ano</option>
+                  <option value="4">Sim, no último ano</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="select-concerned">
+                  10. Algum parente, amigo, médico ou outro profissional de saúde ficou preocupado com o seu consumo de
+                  álcool ou sugeriu que você diminuísse o consumo?
+                </label>
+                <select id="select-concerned">
+                  <option value="0">Não</option>
+                  <option value="2">Sim, mas não no último ano</option>
+                  <option value="4">Sim, no último ano</option>
+                </select>
+              </div>
             </div>
 
-            <div class="form-group">
-              <label>Quantas doses você consome em um dia típico?</label>
-              <select id="quantidade">
-                <option value="0">1-2 doses</option>
-                <option value="1">3-4 doses</option>
-                <option value="2">5-6 doses</option>
-                <option value="3">7-9 doses</option>
-                <option value="4">10 ou mais doses</option>
-              </select>
+            <div class="form-button">
+              <button class="btn" id="calculate-button">Avaliar Meu Risco</button>
             </div>
 
-            <div class="form-group">
-              <label>Com que frequência você consome 6 ou mais doses em uma ocasião?</label>
-              <select id="binge">
-                <option value="0">Nunca</option>
-                <option value="1">Menos que mensalmente</option>
-                <option value="2">Mensalmente</option>
-                <option value="3">Semanalmente</option>
-                <option value="4">Diariamente ou quase</option>
-              </select>
-            </div>
-
-            <div style="text-align: center">
-              <button class="btn" onclick="calcularRisco()">Avaliar Meu Risco</button>
-            </div>
-
-            <div id="resultado" class="result-box">
-              <h3 id="nivelRisco"></h3>
-              <p id="mensagemRisco"></p>
-              <p id="recomendacao"></p>
+            <div id="result" class="result-box">
+              <h3 id="risk-Level"></h3>
+              <p id="risk-message"></p>
+              <p><strong>Recomendação: </strong><span id="risk-recommendation"></span></p>
             </div>
           </div>
         </div>

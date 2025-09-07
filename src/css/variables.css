@@ -39,6 +39,7 @@
 
   --purple-gradient: linear-gradient(135deg, var(--dark-blue) 0%, var(--purple) 100%);
   --red-gradient: linear-gradient(135deg, var(--light-red) 0%, var(--dark-orange) 100%);
+  --green-gradient: linear-gradient(135deg, var(--dark-green) 0%, var(--light-green) 100%);
   --impact-bg: rgba(235, 234, 235, 0.2);
   --impact-bg-lighter: rgba(235, 234, 235, 0.1);
 

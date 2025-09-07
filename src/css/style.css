@@ -282,15 +282,38 @@ h3.youth-content-title {
 
 /* Interactive elements */
 .calculator {
-  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
-  color: white;
+  background: var(--green-gradient);
+  color: var(--light-white);
   padding: 3rem;
   border-radius: 20px;
   margin: 3rem 0;
 }
 
+.calculator h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 2rem;
+}
+
+.calculator-text {
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--light-navy);
+}
+
+.form .form-groups {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2rem;
+  row-gap: 3rem;
+}
+
 .form-group {
   margin-bottom: 1rem;
+  height: 100%;
 }
 
 .form-group label {
@@ -308,9 +331,14 @@ h3.youth-content-title {
   font-size: 1rem;
 }
 
+.form-button {
+  text-align: center;
+  margin-top: 2rem;
+}
+
 .btn {
-  background: #fff;
-  color: #28a745;
+  background: var(--light-white);
+  color: var(--light-navy);
   border: none;
   padding: 1rem 2rem;
   border-radius: 25px;
@@ -326,11 +354,24 @@ h3.youth-content-title {
 }
 
 .result-box {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--impact-bg-lighter);
+  color: var(--light-navy);
   padding: 2rem;
   border-radius: 10px;
   margin-top: 2rem;
   display: none;
+}
+
+.result-box h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.result-box p {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
 }
 
 /* Help resources */
@@ -475,6 +516,10 @@ h3.youth-content-title {
   }
 
   .youth-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .form .form-groups {
     grid-template-columns: 1fr;
   }
 }

@@ -8,10 +8,10 @@ const RISK_RECOMMENDATION_ID = "risk-recommendation";
 
 function addCalculatorButtonEventListener() {
   const button = document.getElementById(BUTTON_ID);
-  button?.addEventListener("click", calcularRisco);
+  button?.addEventListener("click", calculateRisk);
 }
 
-function calcularRisco() {
+function calculateRisk() {
   const firstQuestionId = OPTIONS_IDS[0].id;
   const firstQuestionValue = parseInt(document.getElementById(firstQuestionId).value);
   const isFirstQuestionZero = firstQuestionValue === 0;

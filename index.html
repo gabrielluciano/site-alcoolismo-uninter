@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
   </head>
+
   <body>
     <!-- Header -->
     <header>
@@ -18,9 +19,12 @@
         <div class="header-content fade-in">
           <h1>Conscientização e Prevenção</h1>
           <p>Impactos do Alcoolismo no Brasil e a Juventude</p>
-          <div class="impact-stat pulse">
-            <div class="impact-number" id="counter">0</div>
-            <div class="impact-desc">Mortes <span>por ano</span> relacionadas ao álcool no Brasil</div>
+          <div class="impact-stat-parent">
+            <div class="impact-stat pulse">
+              <div class="impact-number" id="counter">0</div>
+              <div class="impact-desc">Pessoas morrem <span>por hora</span> no Brasil</div>
+              <div class="impact-subtext">relacionadas ao consumo de álcool</div>
+            </div>
           </div>
         </div>
       </div>
@@ -63,27 +67,30 @@
               </div>
               <h3>Mortalidade</h3>
               <p>
-                Aproximadamente <strong>58.000 mortes</strong> por ano no Brasil são relacionadas ao consumo de álcool,
-                incluindo acidentes de trânsito, violência e doenças hepáticas.
+                <strong>12 mortes por hora</strong> no Brasil são atribuídas ao consumo de álcool, incluindo acidentes,
+                violência, doenças hepáticas e cardiovasculares.
               </p>
+              <div class="source-note">Fonte: Fiocruz, Panorama do Álcool 2024</div>
             </div>
 
             <div class="card fade-in">
-              <div class="card-icon"><i class="fas fa-hospital"></i></div>
-              <h3>Internações</h3>
+              <div class="card-icon"><i class="fas fa-arrow-trend-up"></i></div>
+              <h3>Consumo Abusivo Crescente</h3>
               <p>
-                O álcool é responsável por <strong>23%</strong> de todas as internações psiquiátricas no SUS,
-                representando cerca de 160.000 internações anuais.
+                <strong>20,8%</strong> da população brasileira adulta pratica consumo abusivo de álcool, um aumento de
+                18,4% em relação a 2021.
               </p>
+              <div class="source-note">Fonte: Vigitel 2023, Ministério da Saúde</div>
             </div>
 
             <div class="card fade-in">
               <div class="card-icon"><i class="fas fa-car-crash"></i></div>
-              <h3>Acidentes de Trânsito</h3>
+              <h3>Custo Social</h3>
               <p>
-                <strong>35%</strong> dos acidentes de trânsito fatais no Brasil envolvem o consumo de álcool,
-                especialmente entre jovens de 18 a 35 anos.
+                <strong>R$ 48 bilhões</strong> foi o custo total do consumo de álcool para o Brasil em 2019, incluindo
+                gastos com saúde e perdas econômicas.
               </p>
+              <div class="source-note">Fonte: Estudo Fiocruz sobre Custos Sociais, 2024</div>
             </div>
           </div>
         </div>
@@ -94,17 +101,27 @@
           <h2 class="section-title">Veja os Números</h2>
 
           <div class="chart-container">
-            <h3>Consumo de Álcool por Faixa Etária no Brasil</h3>
+            <h3>Consumo Abusivo por Faixa Etária (%) - Brasil 2023</h3>
             <div class="chart-wrapper">
               <canvas id="consumptionByAgeCanvas"></canvas>
             </div>
+            <div class="source-note">Fonte: Vigitel 2023 - Ministério da Saúde</div>
           </div>
 
           <div class="chart-container">
-            <h3>Evolução das Mortes Relacionadas ao Álcool (2015-2023)</h3>
+            <h3>Mortes Relacionadas ao Álcool por Gênero (2020)</h3>
             <div class="chart-wrapper">
-              <canvas id="deathEvolutionCanvas"></canvas>
+              <canvas id="deathsByGenderCanvas"></canvas>
             </div>
+            <div class="source-note">Fonte: CISA - Centro de Informações sobre Saúde e Álcool, 2024</div>
+          </div>
+
+          <div class="chart-container">
+            <h3>Evolução das Internações por Dependência de Álcool (2015-2023)</h3>
+            <div class="chart-wrapper">
+              <canvas id="hospitalizationsByYearCanvas"></canvas>
+            </div>
+            <div class="source-note">Fonte: DATASUS/SIH</div>
           </div>
         </div>
       </section>
@@ -114,27 +131,27 @@
         <div class="container">
           <div class="youth-content">
             <div>
-              <h2 class="youth-content-title">Juventude em Risco</h2>
+              <h2 class="youth-content-title">Juventude em Alto Risco</h2>
               <p class="youth-content-text">
-                A juventude brasileira está cada vez mais exposta aos riscos do consumo precoce de álcool. Os dados
-                mostram uma tendência preocupante que demanda ação imediata.
+                Os dados oficiais mostram uma situação preocupante entre os jovens brasileiros, com início precoce do
+                consumo e padrões de risco elevados.
               </p>
               <div class="youth-stats">
                 <div class="stat-box">
-                  <div class="stat-number">67%</div>
-                  <div>dos jovens já experimentaram álcool antes dos 18 anos</div>
+                  <div class="stat-number">25%</div>
+                  <div>dos jovens (18-24 anos) fazem consumo abusivo</div>
                 </div>
                 <div class="stat-box">
-                  <div class="stat-number">24%</div>
-                  <div>fazem uso abusivo regularmente</div>
+                  <div class="stat-number">23%</div>
+                  <div>dos adultos jovens (25-34 anos) bebem excessivamente</div>
                 </div>
                 <div class="stat-box">
-                  <div class="stat-number">42%</div>
-                  <div>começaram a beber entre 13-16 anos</div>
+                  <div class="stat-number">13,9 anos</div>
+                  <div>é a idade média do primeiro contato com álcool</div>
                 </div>
                 <div class="stat-box">
-                  <div class="stat-number">18%</div>
-                  <div>já sofreram blackouts alcoólicos</div>
+                  <div class="stat-number">30%</div>
+                  <div>maior taxa entre jovens pretos/pardos</div>
                 </div>
               </div>
             </div>
@@ -154,54 +171,59 @@
           <div class="card-grid">
             <div class="card">
               <div class="card-icon light-red">
-                <i class="fas fa-brain"></i>
+                <i class="fas fa-venus"></i>
               </div>
-              <h3>Saúde Mental</h3>
+              <h3>Impacto nas Mulheres</h3>
               <p>
-                O álcool está presente em <strong>60%</strong> dos casos de depressão e ansiedade entre jovens,
-                prejudicando desenvolvimento cognitivo e emocional.
+                O consumo abusivo entre mulheres cresceu <strong>4,25%</strong> em 10 anos. Em 2020,
+                <strong>15.490 mulheres</strong> morreram por causas relacionadas ao álcool.
               </p>
+              <div class="source-note">Fonte: Agência Brasil/Fiocruz, 2023</div>
             </div>
 
             <div class="card">
               <div class="card-icon orange">
-                <i class="fas fa-graduation-cap"></i>
+                <i class="fas fa-users"></i>
               </div>
-              <h3>Educação</h3>
+              <h3>Desigualdade Racial</h3>
               <p>
-                Estudantes que fazem uso abusivo de álcool têm
-                <strong>40%</strong> mais chances de abandonar os estudos e pior desempenho acadêmico.
+                A taxa de mortalidade entre pessoas pretas/pardas é <strong>30% superior</strong> à de pessoas brancas
+                (10,4 vs 7,9 por 100 mil habitantes).
               </p>
+              <div class="source-note">Fonte: CISA - Panorama 2024</div>
             </div>
 
             <div class="card">
               <div class="card-icon purple">
-                <i class="fas fa-home"></i>
+                <i class="fas fa-car-crash"></i>
               </div>
-              <h3>Família</h3>
+              <h3>Acidentes de Trânsito</h3>
               <p>
-                O alcoolismo está presente em <strong>45%</strong> dos casos de violência doméstica e desestruturação
-                familiar no Brasil.
+                O álcool está presente em <strong>35%</strong> dos acidentes fatais, sendo a principal causa de morte
+                violenta entre jovens de 15 a 29 anos.
               </p>
+              <div class="source-note">Fonte: Ministério da Saúde/DATASUS</div>
             </div>
 
             <div class="card">
               <div class="card-icon green">
-                <i class="fas fa-dollar-sign"></i>
+                <i class="fas fa-chart-line"></i>
               </div>
-              <h3>Economia</h3>
+              <h3>Impacto da Pandemia</h3>
               <p>
-                O custo social do alcoolismo representa
-                <strong>R$ 7,3 bilhões</strong> anuais ao sistema público de saúde brasileiro.
+                Durante a pandemia houve <strong>aumento de 40%</strong> no consumo domiciliar e crescimento nas
+                internações por dependência química.
               </p>
+              <div class="source-note">Fonte: Fiocruz/CISA, 2024</div>
             </div>
           </div>
 
           <div class="chart-container">
-            <h3>Principais Consequências do Alcoolismo</h3>
+            <h3>Principais Causas de Morte Relacionadas ao Álcool (%)</h3>
             <div class="chart-wrapper">
-              <canvas id="consequencesCanvas"></canvas>
+              <canvas id="deathCausesCanvas"></canvas>
             </div>
+            <div class="source-note">Fonte: CISA - Panorama do Álcool 2024</div>
           </div>
         </div>
       </section>
@@ -361,43 +383,50 @@
           <div class="card-grid">
             <div class="card">
               <div class="card-icon light-blue">
-                <i class="fas fa-users"></i>
+                <i class="fas fa-graduation-cap"></i>
               </div>
-              <h3>Educação Familiar</h3>
+              <h3>Educação Preventiva</h3>
               <p>
-                Diálogo aberto entre pais e filhos sobre os riscos do álcool reduz em <strong>50%</strong> as chances de
-                uso precoce.
+                Programas educacionais estruturados reduzem em <strong>40%</strong> o início precoce do consumo e
+                comportamentos de risco entre adolescentes.
               </p>
+              <div class="source-note">Fonte: Revisão Cochrane sobre Prevenção Universal</div>
             </div>
 
             <div class="card">
               <div class="card-icon orange">
-                <i class="fas fa-school"></i>
+                <i class="fas fa-shield-alt"></i>
               </div>
-              <h3>Programas Escolares</h3>
+              <h3>Políticas Públicas</h3>
               <p>
-                Escolas com programas de prevenção têm
-                <strong>35%</strong> menos casos de consumo problemático entre estudantes.
+                Legislação restritiva sobre venda, publicidade e preço comprovadamente reduz o consumo em
+                <strong>25-30%</strong> na população.
               </p>
+              <div class="source-note">Fonte: OMS - Estratégias SAFER</div>
             </div>
 
             <div class="card">
               <div class="card-icon green">
-                <i class="fas fa-running"></i>
+                <i class="fas fa-stethoscope"></i>
               </div>
-              <h3>Atividades Esportivas</h3>
+              <h3>Intervenção Breve</h3>
               <p>
-                Jovens envolvidos em esportes têm <strong>60%</strong> menos probabilidade de desenvolver dependência
-                alcoólica.
+                Orientação médica de 15 minutos reduz o consumo de álcool em <strong>20%</strong> dos pacientes em uso
+                de risco.
               </p>
+              <div class="source-note">Fonte: Ministério da Saúde - Protocolos SUS</div>
             </div>
 
             <div class="card">
               <div class="card-icon light-red">
-                <i class="fas fa-user-md"></i>
+                <i class="fas fa-hands-helping"></i>
               </div>
-              <h3>Acompanhamento Médico</h3>
-              <p>Consultas regulares permitem identificação precoce de padrões de risco e intervenção eficaz.</p>
+              <h3>Suporte Familiar</h3>
+              <p>
+                Famílias envolvidas em programas de prevenção têm <strong>60% mais sucesso</strong> na prevenção do uso
+                problemático.
+              </p>
+              <div class="source-note">Fonte: Programa Família Fortalecida, SENAD</div>
             </div>
           </div>
         </div>
@@ -410,6 +439,13 @@
           <p class="help-section-text">
             Se você ou alguém que conhece precisa de ajuda, estes recursos estão disponíveis 24 horas 7 dias por semana.
           </p>
+
+          <div class="emergency-box pulse">
+            <i class="fas fa-ambulance"></i>
+            <h3>EMERGÊNCIA - RISCO DE VIDA</h3>
+            <div class="emergency-number">192 - SAMU</div>
+            <p>Em caso de intoxicação alcoólica grave ou risco imediato</p>
+          </div>
 
           <div class="help-grid">
             <div class="help-card">
@@ -457,18 +493,26 @@
     <footer class="footer">
       <div class="container">
         <div class="sources">
-          <h3>Fontes dos Dados</h3>
+          <h3>Fontes Oficiais dos Dados</h3>
           <p>
-            <a href="#">IBGE - Pesquisa Nacional de Saúde</a>
+            <a href="https://cisa.org.br" target="_blank" rel="noopener">
+              <i class="fas fa-external-link-alt"></i> CISA - Centro de Informações sobre Saúde e Álcool
+            </a>
           </p>
           <p>
-            <a href="#">Ministério da Saúde - DATASUS</a>
+            <a href="https://datasus.saude.gov.br" target="_blank" rel="noopener">
+              <i class="fas fa-external-link-alt"></i> DATASUS - Ministério da Saúde
+            </a>
           </p>
           <p>
-            <a href="#">SENAD - Secretaria Nacional Antidrogas</a>
+            <a href="https://portalarquivos2.saude.gov.br/images/pdf/2024/vigitel/" target="_blank" rel="noopener">
+              <i class="fas fa-external-link-alt"></i> Vigitel 2023
+            </a>
           </p>
           <p>
-            <a href="#">OMS - Organização Mundial da Saúde</a>
+            <a href="https://portal.fiocruz.br" target="_blank" rel="noopener">
+              <i class="fas fa-external-link-alt"></i> Fiocruz
+            </a>
           </p>
         </div>
 
@@ -500,7 +544,13 @@
 
         <div style="border-top: 1px solid #34495e; padding-top: 2rem; text-align: center">
           <p>&copy; 2025 Projeto Conscientização e Prevenção - UNINTER. Todos os direitos reservados.</p>
-          <p>Este site foi desenvolvido com o objetivo educativo e de conscientização social.</p>
+          <p>
+            Este site foi desenvolvido com objetivo educativo e de conscientização social, baseado em dados científicos
+            e fontes oficiais.
+          </p>
+          <p class="disclaimer">
+            <strong>Importante:</strong> As informações deste site não substituem acompanhamento médico profissional.
+          </p>
         </div>
       </div>
     </footer>

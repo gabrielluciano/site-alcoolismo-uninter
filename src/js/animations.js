@@ -1,5 +1,5 @@
 const COUNTER_TAG_ID = "counter";
-const NUMBER_OF_DEATHS_PER_YEAR = 58000;
+const NUMBER_OF_DEATHS_PER_YEAR = 12;
 const ANIMATION_INTERVAL = 30;
 const LOCALE = "pt-BR";
 
